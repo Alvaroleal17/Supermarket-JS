@@ -1,9 +1,9 @@
-var closeOfertaDia = document.getElementById("btnCloseOfertaDia");
-var oferta = document.getElementById("btnOferta");
-var closeOferta = document.getElementById("btnCloseOferta");
-var texto = '';
-var selecciono = '';
-var btnBuy = document.getElementById("btnBuy");
+const closeOfertaDia = document.getElementById("btnCloseOfertaDia");
+const oferta = document.getElementById("btnOferta");
+const closeOferta = document.getElementById("btnCloseOferta");
+const texto = '';
+const selecciono = '';
+const btnBuy = document.getElementById("btnBuy");
 
 document.getElementById("defaultOpen").click();
 
@@ -54,8 +54,8 @@ closeOferta.addEventListener("click", function () {
  */
 
 window.onclick = function (event) {
-    var ofertaDia = document.getElementById("ofertaDia");
-    var ofertas = document.getElementById("ofertas");
+    const ofertaDia = document.getElementById("ofertaDia");
+    const ofertas = document.getElementById("ofertas");
     if (event.target == ofertaDia) {
         ofertaDia.style.display = "none";
     }
@@ -72,10 +72,10 @@ window.onclick = function (event) {
  * 
  */
 function buscar(event) {
-    var codigo = event.which || event.keyCode;
-    var btnBuscar = document.getElementById("btnBuscar");
-    var rta = document.getElementById("modalBuscar");
-    var rtaBuscar = document.getElementById("rtaBuscar");
+    const codigo = event.which || event.keyCode;
+    const btnBuscar = document.getElementById("btnBuscar");
+    const rta = document.getElementById("modalBuscar");
+    const rtaBuscar = document.getElementById("rtaBuscar");
     if (codigo === 8) {
         if (selecciono != '') {
             texto = texto.replace(selecciono, '');
@@ -122,7 +122,7 @@ function borrar() {
  * 
  */
 function openPage(evt, pageName) {
-    var i, page, menulinks;
+    let i, page, menulinks;
     page = document.getElementsByClassName("page");
     for (i = 0; i < page.length; i++) {
         page[i].style.display = "none";
@@ -142,8 +142,8 @@ function openPage(evt, pageName) {
  * Función de onclick que obtiene nombre y precio del producto sleccionado y lo almacena en su respectivo array
  * 
  */
-var productos = [];
-var precios = [];
+let productos = [];
+let precios = [];
 function shop(product, price) {
     productos[productos.length] = product;
     precios[precios.length] = price;
@@ -161,8 +161,8 @@ function shop(product, price) {
  * 
  */
 btnBuy.addEventListener("click", function () {
-    var total = 0;
-    var table, row, cell1, cell2;
+    let total = 0;
+    let table, row, cell1, cell2;
     for (i = 0; i < productos.length; i++) {
         table = document.getElementById("factura");
         row = table.insertRow(0);
