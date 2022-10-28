@@ -1,0 +1,1751 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>CestaDorada.com</title>
+    <link rel="icon" type="image/x-icon" href="./img/logo2.png">
+    <link href="./css/styles.css" rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Permanent+Marker:400' rel='stylesheet' type='text/css'>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <!-- Menu -->
+    <nav class="navbar navbar-expand-lg bg-warning menu-text">
+        <div class="container-fluid">
+            <a class="navbar-brand me-5" id="defaultOpen" onclick="openPage(event, 'super')">
+                <img src="img/logo2.png" alt="" width="60" height="52">
+            </a>
+            <button class="navbar-toggler me-1" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-lg-0">
+                    <li class="nav-item me-4">
+                        <a class="nav-link link-danger me-2" aria-current="page" id="btnOferta">
+                            <strong class="letra"><i class="fa fa-gift" aria-hidden="true"></i> Ofertas</strong>
+                        </a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link link-dark dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            <strong>Carnes</strong>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item menulinks" onclick="openPage(event, 'carne')">Carnes Frescas</a>
+                            </li>
+                            <li><a class="dropdown-item menulinks" onclick="openPage(event, 'pescado')">Pescados y
+                                    Mariscos</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            <strong>Vegetales</strong>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" onclick="openPage(event, 'frutas')">Frutas y Verduras</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            <strong>Bebidas</strong>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" onclick="openPage(event, 'bebidas')">Gaseosas</a></li>
+                            <li><a class="dropdown-item" onclick="openPage(event, 'licores')">Vinos y Licores</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            <strong>Viveres</strong>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" onclick="openPage(event, 'despensa')">Despensa</a></li>
+                            <li><a class="dropdown-item" onclick="openPage(event, 'panaderia')">Panadería</a></li>
+                            <li><a class="dropdown-item" onclick="openPage(event, 'lacteos')">Lácteos</a></li>
+                            <li><a class="dropdown-item" onclick="openPage(event, 'snacks')">Snacks</a></li>
+                            <li><a class="dropdown-item" onclick="openPage(event, 'helados')">Helados</a></li>
+                            <li><a class="dropdown-item" onclick="openPage(event, 'dulces')">Dulces</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            <strong>Hogar</strong>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" onclick="openPage(event, 'aseo')">Aseo del Hogar</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <a class="nav-link link-primary me-3" aria-current="page" id="btnBuy">
+                    <strong>
+                        <i class="fa fa-shopping-basket" aria-hidden="true"></i>
+                        <sup id="car"></sup>
+                        Comprar
+                    </strong>
+                </a>
+                <form onsubmit="return false" class="d-flex" role="search">
+                    <input class="form-control me-1" placeholder="Buscar en Cesta" aria-label="Buscar"
+                        onkeydown="buscar(event);" onselect="borrar()">
+                    <button class="btn btn-outline-success" type="submit" id="btnBuscar">
+                        <strong>Buscar</strong>
+                    </button>
+                </form>
+
+            </div>
+        </div>
+    </nav>
+
+    <!-- Contenido sección Aseo -->
+    <div class="container page" id="aseo">
+        <div class="row">
+            <div class="col">
+                <div class="card m-2 item">
+                    <img src="img//Productos/blanqueador.png" class="card-img-top" alt="blanqueador">
+                    <div class="card-body text-center">
+                        <h5 class="card-title text-center"> Blanqueador x3700ml</h5>
+                        <h3 class="text-center text-success">$ 8.500 </h3>
+                        <h6 class="text-center c-text"> (ml a 3,32)</h6>
+                        <a href="#" class="btn btn-primary btn-lg" onclick="shop('blanqueador', 8500)">
+                            Agregar <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card m-2 item">
+                    <img src="img//Productos/desengrasante.png" class="card-img-top" alt="desengrasante">
+                    <div class="card-body text-center">
+                        <h5 class="card-title text-center"> Desengrasante x1000ml </h5>
+                        <h3 class="text-center text-success">$ 4.100 </h3>
+                        <h6 class="text-center c-text"> (ml a 4,1)</h6>
+                        <a href="#" class="btn btn-primary btn-lg" onclick="shop('desengrasante', 4100)">
+                            Agregar <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card m-2 item">
+                    <img src="img//Productos/quitamanchas.png" class="card-img-top" alt="quitamanchas">
+                    <div class="card-body text-center">
+                        <h5 class="card-title text-center"> Quitamanchas Clorox x930ml</h5>
+                        <h3 class="text-center text-success">$ 10.000 </h3>
+                        <h6 class="text-center c-text"> (ml a 10,76)</h6>
+                        <a href="#" class="btn btn-primary btn-lg" onclick="shop('quitamanchas', 10000)">
+                            Agregar <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card m-2 item">
+                    <img src="img//Productos/pisos.png" class="card-img-top" alt="pisos">
+                    <div class="card-body text-center">
+                        <h5 class="card-title text-center"> Limpia pisos fabuloso x1000ml</h5>
+                        <h3 class="text-center text-success">$ 6.300 </h3>
+                        <h6 class="text-center c-text"> (ml a 6,38)</h6>
+                        <a href="#" class="btn btn-primary btn-lg" onclick="shop('fabuloso', 6300)">
+                            Agregar <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <div class="card m-2 item">
+                    <img src="img//Productos/vidrios.png" class="card-img-top" alt="vidrios">
+                    <div class="card-body text-center">
+                        <h5 class="card-title text-center"> Limpia vidrios x1000ml</h5>
+                        <h3 class="text-center text-success">$ 4.100 </h3>
+                        <h6 class="text-center c-text"> (ml a 4,1)</h6>
+                        <a href="#" class="btn btn-primary btn-lg" onclick="shop('limpia vidrios', 4100)">
+                            Agregar <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card m-2 item">
+                    <img src="img//Productos/toallitas.png" class="card-img-top" alt="toallitas">
+                    <div class="card-body text-center">
+                        <h5 class="card-title text-center"> Toallitas humedas x40und</h5>
+                        <h3 class="text-center text-success">$ 6.500 </h3>
+                        <br>
+                        <a href="#" class="btn btn-primary btn-lg" onclick="shop('toallitas humedas', 6500)">
+                            Agregar <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card m-2 item">
+                    <img src="img//Productos/aromatizante.png" class="card-img-top" alt="aromatizante">
+                    <div class="card-body text-center">
+                        <h5 class="card-title text-center"> Aromatizante x400ml</h5>
+                        <h3 class="text-center text-success">$ 9.900 </h3>
+                        <h6 class="text-center c-text"> (ml a 24,72)</h6>
+                        <a href="#" class="btn btn-primary btn-lg" onclick="shop('aromatizante', 9900)">
+                            Agregar <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card m-2 item">
+                    <img src="img//Productos/multiusos.png" class="card-img-top" alt="limpiador">
+                    <div class="card-body text-center">
+                        <h5 class="card-title text-center"> Limpiador multiusos x900ml </h5>
+                        <h3 class="text-center text-success">$ 8.700 </h3>
+                        <h6 class="text-center c-text"> (ml a 9,67)</h6>
+                        <a href="#" class="btn btn-primary btn-lg" onclick="shop('limpiador multiusos', 8700)">
+                            Agregar <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Fin Contenido sección Aseo -->
+
+    <!-- Contenido sección Bebidas -->
+    <div class="container page" id="bebidas">
+        <div class="row">
+            <div class="col">
+                <div class="card m-2 item">
+                    <img src="img//Productos/gaseosa.png" class="card-img-top" alt="gaseosa">
+                    <div class="card-body text-center">
+                        <h5 class="card-title text-center"> Gaseosa x1.5L</h5>
+                        <h3 class="text-center text-success">$ 4.500 </h3>
+                        <h6 class="text-center c-text"> (L a 3,0)</h6>
+                        <a href="#" class="btn btn-primary btn-lg" onclick="shop('gaseosa', 4500)">
+                            Agregar <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card m-2 item">
+                    <img src="img//Productos/agua.png" class="card-img-top" alt="agua">
+                    <div class="card-body text-center">
+                        <h5 class="card-title text-center"> Agua en Bolsa x6L</h5>
+                        <h3 class="text-center text-success">$ 4.200 </h3>
+                        <h6 class="text-center c-text"> (L a 0,7)</h6>
+                        <a href="#" class="btn btn-primary btn-lg" onclick="shop('agua', 4200)">
+                            Agregar <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card m-2 item">
+                    <img src="img//Productos/gatorade.png" class="card-img-top" alt="gatorade">
+                    <div class="card-body text-center">
+                        <h5 class="card-title text-center"> Gatorade x500ml</h5>
+                        <h3 class="text-center text-success">$ 3.000 </h3>
+                        <h6 class="text-center c-text"> (ml a 6,0)</h6>
+                        <a href="#" class="btn btn-primary btn-lg" onclick="shop('gatorade', 3000)">
+                            Agregar <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card m-2 item">
+                    <img src="img//Productos/bretaña.png" class="card-img-top" alt="bretaña">
+                    <div class="card-body text-center">
+                        <h5 class="card-title text-center"> Bretaña x1.5L</h5>
+                        <h3 class="text-center text-success">$ 3.300 </h3>
+                        <h6 class="text-center c-text"> (L a 2,20)</h6>
+                        <a href="#" class="btn btn-primary btn-lg" onclick="shop('bretaña', 3300)">
+                            Agregar <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <div class="card m-2 item">
+                    <img src="img//Productos/pony.png" class="card-img-top" alt="pony">
+                    <div class="card-body text-center">
+                        <h5 class="card-title text-center"> Pony Malta x2L</h5>
+                        <h3 class="text-center text-success">$ 4.400 </h3>
+                        <h6 class="text-center c-text"> (L a 2,20)</h6>
+                        <a href="#" class="btn btn-primary btn-lg" onclick="shop('pony malta', 4400)">
+                            Agregar <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card m-2 item">
+                    <img src="img//Productos/h2oh.png" class="card-img-top" alt="h2oh">
+                    <div class="card-body text-center">
+                        <h5 class="card-title text-center"> H2OH! x1.5L</h5>
+                        <h3 class="text-center text-success">$ 3.600 </h3>
+                        <h6 class="text-center c-text"> (L a 2,40)</h6>
+                        <a href="#" class="btn btn-primary btn-lg" onclick="shop('H2OH', 3600)">
+                            Agregar <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card m-2 item">
+                    <img src="img//Productos/hit.png" class="card-img-top" alt="jugo">
+                    <div class="card-body text-center">
+                        <h5 class="card-title text-center"> Jugo HIT x500ml</h5>
+                        <h3 class="text-center text-success">$ 2.000 </h3>
+                        <h6 class="text-center c-text"> (ml a 4,0)</h6>
+                        <a href="#" class="btn btn-primary btn-lg" onclick="shop('jugo hit', 2000)">
+                            Agregar <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card m-2 item">
+                    <img src="img//Productos/jugonaranja.png" class="card-img-top" alt="jugo">
+                    <div class="card-body text-center">
+                        <h5 class="card-title text-center"> Jugo de naranja x1L</h5>
+                        <h3 class="text-center text-success">$ 7.000 </h3>
+                        <h6 class="text-center c-text"> (L a 7,0)</h6>
+                        <a href="#" class="btn btn-primary btn-lg" onclick="shop('jugo naranja', 7000)">
+                            Agregar <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Fin Contenido sección Bebidas -->
+
+    <!-- Contenido sección despensa -->
+    <div class="container page" id="despensa">
+        <div class="row">
+            <div class="col">
+                <div class="card m-2 item">
+                    <img src="img//Productos/lenteja.png" class="card-img-top" alt="lentejas">
+                    <div class="card-body text-center">
+                        <h5 class="card-title text-center"> Lentejas x500g</h5>
+                        <h3 class="text-center text-success">$ 4.000 </h3>
+                        <h6 class="text-center c-text"> (gr a 8,0)</h6>
+                        <a href="#" class="btn btn-primary btn-lg" onclick="shop('lentejas', 4000)">
+                            Agregar <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card m-2 item">
+                    <img src="img//Productos/arroz.png" class="card-img-top" alt="arroz">
+                    <div class="card-body text-center">
+                        <h5 class="card-title text-center"> Arroz x1000g </h5>
+                        <h3 class="text-center text-success">$ 5.800 </h3>
+                        <h6 class="text-center c-text"> (gr a 5,8)</h6>
+                        <a href="#" class="btn btn-primary btn-lg" onclick="shop('arroz', 5800)">
+                            Agregar <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card m-2 item">
+                    <img src="img//Productos/sal.png" class="card-img-top" alt="sal">
+                    <div class="card-body text-center">
+                        <h5 class="card-title text-center"> Sal x1000g </h5>
+                        <h3 class="text-center text-success">$ 1.900 </h3>
+                        <h6 class="text-center c-text"> (gr a 1,9)</h6>
+                        <a href="#" class="btn btn-primary btn-lg" onclick="shop('sal', 1900)">
+                            Agregar <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card m-2 item">
+                    <img src="img//Productos/frijol.png" class="card-img-top" alt="frijol">
+                    <div class="card-body text-center">
+                        <h5 class="card-title text-center"> Frijol x500g </h5>
+                        <h3 class="text-center text-success">$ 6.500 </h3>
+                        <h6 class="text-center c-text"> (gr a 13,0)</h6>
+                        <a href="#" class="btn btn-primary btn-lg" onclick="shop('frijol', 6500)">
+                            Agregar <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <div class="card m-2 item">
+                    <img src="img//Productos/pasta.png" class="card-img-top" alt="pasta">
+                    <div class="card-body text-center">
+                        <h5 class="card-title text-center"> Pasta spaghetti x1000g </h5>
+                        <h3 class="text-center text-success">$ 6.000 </h3>
+                        <h6 class="text-center c-text"> (gr a 6,0)</h6>
+                        <a href="#" class="btn btn-primary btn-lg" onclick="shop('pasta', 6000)">
+                            Agregar <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card m-2 item">
+                    <img src="img//Productos/aceite.png" class="card-img-top" alt="aceite">
+                    <div class="card-body text-center">
+                        <h5 class="card-title text-center"> Aceite x3000ml </h5>
+                        <h3 class="text-center text-success">$ 30.000 </h3>
+                        <h6 class="text-center c-text"> (ml a 10,0)</h6>
+                        <a href="#" class="btn btn-primary btn-lg" onclick="shop('aceite', 30000 )">
+                            Agregar <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card m-2 item">
+                    <img src="img//Productos/garbanzo.png" class="card-img-top" alt="garbanzo">
+                    <div class="card-body text-center">
+                        <h5 class="card-title text-center"> Garbanzo x500g </h5>
+                        <h3 class="text-center text-success">$ 4.100 </h3>
+                        <h6 class="text-center c-text"> (gr a 8,2)</h6>
+                        <a href="#" class="btn btn-primary btn-lg" onclick="shop('garbanzo', 4100)">
+                            Agregar <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card m-2 item">
+                    <img src="img//Productos/azucar.png" class="card-img-top" alt="azucar">
+                    <div class="card-body text-center">
+                        <h5 class="card-title text-center"> Azucar x2.5 kilo </h5>
+                        <h3 class="text-center text-success">$ 9.500 </h3>
+                        <h6 class="text-center c-text"> (gr a 3,5)</h6>
+                        <a href="#" class="btn btn-primary btn-lg" onclick="shop('azucar', 9500)">
+                            Agregar <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Fin Contenido sección despensa -->
+
+    <!-- Contenido sección dulces -->
+    <div class="container page" id="dulces">
+        <div class="row">
+            <div class="col">
+                <div class="card m-2 item">
+                    <img src="img//Productos/chocolatina.png" class="card-img-top" alt="chocolatina">
+                    <div class="card-body text-center">
+                        <h5 class="card-title text-center"> Chocolatina x100g</h5>
+                        <br>
+                        <h3 class="text-center text-success">$ 4.500 </h3>
+                        <h6 class="text-center c-text"> (gr a 45,0)</h6>
+                        <a href="#" class="btn btn-primary btn-lg" onclick="shop('chocolatina', 4500)">
+                            Agregar <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card m-2 item">
+                    <img src="img//Productos/arequipe2.png" class="card-img-top" alt="arequipe">
+                    <div class="card-body text-center">
+                        <h5 class="card-title text-center"> Arequipe x500g</h5>
+                        <h6 class="text-center text-secondary"><del> Antes $ 11.000 </del> </h6>
+                        <h3 class="text-center text-success">$ Ahora 5.500 </h3>
+                        <a href="#" class="btn btn-primary btn-lg" onclick="shop('arequipe', 5500)">
+                            Agregar <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card m-2 item">
+                    <img src="img//Productos/gelatina.png" class="card-img-top" alt="gelatina">
+                    <div class="card-body text-center">
+                        <h5 class="card-title text-center"> Gelatina x35g 3und</h5>
+                        <br>
+                        <h3 class="text-center text-success">$ 3.500 </h3>
+                        <h6 class="text-center c-text"> (gr a 33,30)</h6>
+                        <a href="#" class="btn btn-primary btn-lg" onclick="shop('gelatina', 3500)">
+                            Agregar <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card m-2 item">
+                    <img src="img//Productos/polvo.png" class="card-img-top" alt="polvo">
+                    <div class="card-body text-center">
+                        <h5 class="card-title text-center"> Polvo para hornear x80g</h5>
+                        <br>
+                        <h3 class="text-center text-success">$ 7.200 </h3>
+                        <h6 class="text-center c-text"> (gr a 90,0)</h6>
+                        <a href="#" class="btn btn-primary btn-lg" onclick="shop('polvo hornear', 7200)">
+                            Agregar <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <div class="card m-2 item">
+                    <img src="img//Productos/condensada.png" class="card-img-top" alt="leche">
+                    <div class="card-body text-center">
+                        <h5 class="card-title text-center"> Leche condensada x420g</h5>
+                        <br>
+                        <h3 class="text-center text-success">$ 11.000 </h3>
+                        <h6 class="text-center c-text"> (gr a 25,99)</h6>
+                        <a href="#" class="btn btn-primary btn-lg" onclick="shop('leche condensada', 11000)">
+                            Agregar <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card m-2 item">
+                    <img src="img//Productos/pancake.png" class="card-img-top" alt="pancake">
+                    <div class="card-body text-center">
+                        <h5 class="card-title text-center"> Mezcla para pancake x600g</h5>
+                        <br>
+                        <h3 class="text-center text-success">$ 9.900 </h3>
+                        <h6 class="text-center c-text"> (gr a 16,50)</h6>
+                        <a href="#" class="btn btn-primary btn-lg" onclick="shop('pancake', 9900)">
+                            Agregar <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card m-2 item">
+                    <img src="img//Productos/cremaleche.png" class="card-img-top" alt="crema">
+                    <div class="card-body text-center">
+                        <h5 class="card-title text-center"> Crema de leche x200ml</h5>
+                        <br>
+                        <h3 class="text-center text-success">$ 3.700 </h3>
+                        <h6 class="text-center c-text"> (ml a 18,5)</h6>
+                        <a href="#" class="btn btn-primary btn-lg" onclick="shop('crema de leche', 3700)">
+                            Agregar <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card m-2 item">
+                    <img src="img//Productos/bocadillo.png" class="card-img-top" alt="bocadillo">
+                    <div class="card-body text-center">
+                        <h5 class="card-title text-center"> Bocadillo Lonja x300g</h5>
+                        <br>
+                        <h3 class="text-center text-success">$ 3.900 </h3>
+                        <h6 class="text-center c-text"> (gr a 13,0)</h6>
+                        <a href="#" class="btn btn-primary btn-lg" onclick="shop('bocadillo lonja', 3900)">
+                            Agregar <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Fin Contenido sección dulces -->
+
+    <!-- Contenido sección frutas -->
+    <div class="container page" id="frutas">
+        <div class="row">
+            <div class="col">
+                <div class="card m-2 item">
+                    <img src="img//Productos/manzana.png" class="card-img-top" alt="manzana">
+                    <div class="card-body text-center">
+                        <h5 class="card-title text-center"> Manzana Verde x500g </h5>
+                        <h3 class="text-center text-success">$ 3.000 </h3>
+                        <h6 class="text-center c-text"> (gr a $ 6,0) </h6>
+                        <a href="#" class="btn btn-primary btn-lg" onclick="shop('manzana', 3000)">
+                            Agregar <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card m-2 item">
+                    <img src="img//Productos/fresa.png" class="card-img-top" alt="fresa">
+                    <div class="card-body text-center">
+                        <h5 class="card-title text-center"> Fresa x500g </h5>
+                        <h3 class="text-center text-success">$ 1.500 </h3>
+                        <h6 class="text-center c-text"> (gr a $ 3,0) </h6>
+                        <a href="#" class="btn btn-primary btn-lg" onclick="shop('fresa', 1500)">
+                            Agregar <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card m-2 item">
+                    <img src="img//Productos/banano.png" class="card-img-top" alt="banano">
+                    <div class="card-body text-center">
+                        <h5 class="card-title text-center"> Banano x500g </h5>
+                        <h3 class="text-center text-success">$ 1.000 </h3>
+                        <h6 class="text-center c-text"> (gr a $ 2,0) </h6>
+                        <a href="#" class="btn btn-primary btn-lg" onclick="shop('banano', 1000)">
+                            Agregar <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card m-2 item">
+                    <img src="img//Productos/naranja.png" class="card-img-top" alt="naranja">
+                    <div class="card-body text-center">
+                        <h5 class="card-title text-center"> Naranja x500g </h5>
+                        <h3 class="text-center text-success">$ 1.500 </h3>
+                        <h6 class="text-center c-text"> (gr a $ 3,0) </h6>
+                        <a href="#" class="btn btn-primary btn-lg" onclick="shop('naranja', 1500)">
+                            Agregar <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <div class="card m-2 item">
+                    <img src="img//Productos/lechuga.png" class="card-img-top" alt="lechuga">
+                    <div class="card-body text-center">
+                        <h5 class="card-title text-center"> Lechuga x500g </h5>
+                        <h3 class="text-center text-success">$ 2.000 </h3>
+                        <h6 class="text-center c-text"> (gr a $ 4,0) </h6>
+                        <a href="#" class="btn btn-primary btn-lg" onclick="shop('lechuga', 2000)">
+                            Agregar <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card m-2 item">
+                    <img src="img//Productos/pepino.png" class="card-img-top" alt="pepino">
+                    <div class="card-body text-center">
+                        <h5 class="card-title text-center"> Pepino x500g </h5>
+                        <h3 class="text-center text-success">$ 1.500 </h3>
+                        <h6 class="text-center c-text"> (gr a $ 3,0) </h6>
+                        <a href="#" class="btn btn-primary btn-lg" onclick="shop('pepino', 1500)">
+                            Agregar <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card m-2 item">
+                    <img src="img//Productos/zanahoria.png" class="card-img-top" alt="zanahoria">
+                    <div class="card-body text-center">
+                        <h5 class="card-title text-center"> Zanahoria x500g </h5>
+                        <h3 class="text-center text-success">$ 2.000 </h3>
+                        <h6 class="text-center c-text"> (gr a $ 4,0) </h6>
+                        <p id="zanahoria"></p>
+                        <a href="#" class="btn btn-primary btn-lg" onclick="shop('zanahoria', 2000)">
+                            Agregar <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card m-2 item">
+                    <img src="img//Productos/tomate.png" class="card-img-top" alt="tomate">
+                    <div class="card-body text-center">
+                        <h5 class="card-title text-center"> Tomate x500g</h5>
+                        <h3 class="text-center text-success">$ 2.500 </h3>
+                        <h6 class="text-center c-text"> (gr a $ 5,0) </h6>
+                        <a href="#" class="btn btn-primary btn-lg" onclick="shop('tomate', 2500)">
+                            Agregar <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Fin Contenido sección frutas -->
+
+    <!-- Contenido sección helados -->
+    <div class="container page" id="helados">
+        <div class="row">
+            <div class="col">
+                <div class="card m-2 item">
+                    <img src="img//Productos/chococono.png" class="card-img-top" alt="chococono">
+                    <div class="card-body text-center">
+                        <h5 class="card-title text-center"> Chococono x90g</h5>
+                        <br>
+                        <h3 class="text-center text-success">$ 1.800 </h3>
+                        <h6 class="text-center c-text"> (gr a 19,99)</h6>
+                        <a href="#" class="btn btn-primary btn-lg" onclick="shop('chococono', 1800)">
+                            Agregar <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card m-2 item">
+                    <img src="img//Productos/cookies.png" class="card-img-top" alt="helado">
+                    <div class="card-body text-center">
+                        <h5 class="card-title text-center"> Helado Cookies & Cream 600g</h5>
+                        <br>
+                        <h3 class="text-center text-success">$ 20.000 </h3>
+                        <h6 class="text-center c-text"> (gr a 33,3)</h6>
+                        <a href="#" class="btn btn-primary btn-lg" onclick="shop('helado cookies&cream', 2000)">
+                            Agregar <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card m-2 item">
+                    <img src="img//Productos/vainilla.png" class="card-img-top" alt="helado">
+                    <div class="card-body text-center">
+                        <h5 class="card-title text-center"> Helado de Vainilla x600g</h5>
+                        <br>
+                        <h3 class="text-center text-success">$ 20.000 </h3>
+                        <h6 class="text-center c-text"> (gr a 33,3)</h6>
+                        <a href="#" class="btn btn-primary btn-lg" onclick="shop('helado vainilla', 20000)">
+                            Agregar <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col" class="ocultar">
+                <div class="card m-2 item">
+                    <img src="img//Productos/sinazucar.png" class="card-img-top" alt="helado">
+                    <div class="card-body text-center">
+                        <h5 class="card-title text-center"> Helado Vainilla sin azucar x600g</h5>
+                        <br>
+                        <h3 class="text-center text-success">$ 20.000 </h3>
+                        <h6 class="text-center c-text"> (gr a 33,3)</h6>
+                        <a href="#" class="btn btn-primary btn-lg" onclick="shop('helado sin azucar', 20000)">
+                            Agregar <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <div class="card m-2 item">
+                    <img src="img//Productos/maracuya.png" class="card-img-top" alt="helado">
+                    <div class="card-body text-center">
+                        <h5 class="card-title text-center"> Helado Maracuya x300g</h5>
+                        <br>
+                        <h3 class="text-center text-success">$ 10.000 </h3>
+                        <h6 class="text-center c-text"> (gr a 33,3)</h6>
+                        <a href="#" class="btn btn-primary btn-lg" onclick="shop('helado maracuya', 10000)">
+                            Agregar <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card m-2 item">
+                    <img src="img//Productos/artesanal.png" class="card-img-top" alt="helado">
+                    <div class="card-body text-center">
+                        <h5 class="card-title text-center"> Helado Artesanal x70g</h5>
+                        <br>
+                        <h3 class="text-center text-success">$ 1.700 </h3>
+                        <h6 class="text-center c-text"> (gr a 24,30)</h6>
+                        <a href="#" class="btn btn-primary btn-lg" onclick="shop('helado artesanal', 1700)">
+                            Agregar <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card m-2 item">
+                    <img src="img//Productos/ron con pasas.png" class="card-img-top" alt="helado">
+                    <div class="card-body text-center">
+                        <h5 class="card-title text-center"> Helado de Ron con Pasas x600g</h5>
+                        <br>
+                        <h3 class="text-center text-success">$ 20.000 </h3>
+                        <h6 class="text-center c-text"> (gr a 33,3)</h6>
+                        <a href="#" class="btn btn-primary btn-lg" onclick="shop('helado ron con pasas', 20000)">
+                            Agregar <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card m-2 item">
+                    <img src="img//Productos/chocolate.png" class="card-img-top" alt="helado">
+                    <div class="card-body text-center">
+                        <h5 class="card-title text-center"> Helado de Chocolate x600g</h5>
+                        <h6 class="text-center text-secondary"><del> Antes $ 20.000 </del> </h6>
+                        <h3 class="text-center text-success">$ Ahora 14.000 </h3>
+                        <h6 class="text-center c-text"> (gr a 33,3)</h6>
+                        <a href="#" class="btn btn-primary btn-lg" onclick="shop('helado chocolate', 14000)">
+                            Agregar <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Fin Contenido sección helados -->
+
+
+    <!-- Contenido sección lacteos -->
+    <div class="container page" id="lacteos">
+        <div class="row">
+            <div class="col">
+                <div class="card m-2 item">
+                    <img src="img//Productos/jamon.png" class="card-img-top" alt="jamon">
+                    <div class="card-body text-center">
+                        <h5 class="card-title text-center"> Jamón de cerdo x430g </h5>
+                        <h3 class="text-center text-success">$ 16.900 </h3>
+                        <h6 class="text-center c-text"> (gr a 39,30)</h6>
+                        <a href="#" class="btn btn-primary btn-lg" onclick="shop('jamon de cerdo', 16900)">
+                            Agregar <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card m-2 item">
+                    <img src="img//Productos/leche.png" class="card-img-top" alt="leche">
+                    <div class="card-body text-center">
+                        <h5 class="card-title text-center"> Leche entera x1100ml</h5>
+                        <h3 class="text-center text-success">$ 5.000 </h3>
+                        <h6 class="text-center c-text"> (gr a 4,51)</h6>
+                        <a href="#" class="btn btn-primary btn-lg" onclick="shop('leche', 5000)">
+                            Agregar <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card m-2 item">
+                    <img src="img//Productos/huevos.png" class="card-img-top" alt="huevos">
+                    <div class="card-body text-center">
+                        <h5 class="card-title text-center"> Huevos tipo AA x30und</h5>
+                        <h3 class="text-center text-success">$ 20.000 </h3>
+                        <br>
+                        <a href="#" class="btn btn-primary btn-lg" onclick="shop('huevos', 20000)">
+                            Agregar <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card m-2 item">
+                    <img src="img//Productos/salchichas.png" class="card-img-top" alt="salchicha">
+                    <div class="card-body text-center">
+                        <h5 class="card-title text-center"> Salchicha x12und x480g</h5>
+                        <h3 class="text-center text-success">$ 10.500 </h3>
+                        <h6 class="text-center c-text"> (gr a 21,86)</h6>
+                        <a href="#" class="btn btn-primary btn-lg" onclick="shop('salchicha', 10500)">
+                            Agregar <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <div class="card m-2 item">
+                    <img src="img//Productos/mozzarella.png" class="card-img-top" alt="queso">
+                    <div class="card-body text-center">
+                        <h5 class="card-title text-center"> Queso mozzarella x400g</h5>
+                        <h3 class="text-center text-success">$ 18.000 </h3>
+                        <h6 class="text-center c-text"> (gr a 45,0)</h6>
+                        <a href="#" class="btn btn-primary btn-lg" onclick="shop('queso mozzarella', 18000)">
+                            Agregar <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card m-2 item">
+                    <img src="img//Productos/kumis.png" class="card-img-top" alt="kumis">
+                    <div class="card-body text-center">
+                        <h5 class="card-title text-center"> Kumis x1000g</h5>
+                        <h3 class="text-center text-success">$ 7.000 </h3>
+                        <h6 class="text-center c-text"> (gr a 7,0)</h6>
+                        <a href="#" class="btn btn-primary btn-lg" onclick="shop('kumis', 7000)">
+                            Agregar <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card m-2 item">
+                    <img src="img//Productos/crema.png" class="card-img-top" alt="queso">
+                    <div class="card-body text-center">
+                        <h5 class="card-title text-center"> Queso crema x400g</h5>
+                        <h3 class="text-center text-success">$ 7.600 </h3>
+                        <h6 class="text-center c-text"> (gr a 19,0)</h6>
+                        <a href="#" class="btn btn-primary btn-lg" onclick="shop('queso crema', 7600)">
+                            Agregar <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card m-2 item">
+                    <img src="img//Productos/parmesano.png" class="card-img-top" alt="queso">
+                    <div class="card-body text-center">
+                        <h5 class="card-title text-center"> Queso parmesano x100g</h5>
+                        <h3 class="text-center text-success">$ 9.100</h3>
+                        <h6 class="text-center c-text"> (gr a 91,0)</h6>
+                        <a href="#" class="btn btn-primary btn-lg" onclick="shop('queso parmesano', 9100)">
+                            Agregar <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Fin Contenido sección lacteos -->
+
+
+    <!-- Contenido sección licores -->
+    <div class="container page" id="licores">
+        <div class="row">
+            <div class="col">
+                <div class="card m-2 item">
+                    <img src="img//Productos/clubcolombia.png" class="card-img-top" alt="cerveza">
+                    <div class="card-body text-center">
+                        <h5 class="card-title text-center"> Cerveza Club Colombia Dorada x6und x300ml </h5>
+                        <h3 class="text-center text-success">$ 15.000 </h3>
+                        <h6 class="text-center c-text"> (ml a $ 12,0) </h6>
+                        <a href="#" class="btn btn-primary btn-lg" onclick="shop('Cerveza Club Colombia Dorada', 15000)">
+                            Agregar <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card m-2 item">
+                    <img src="img//Productos/stella.png" class="card-img-top" alt="cerveza">
+                    <div class="card-body text-center">
+                        <h5 class="card-title text-center"> Cerveza Stella Artois x6und x330ml </h5>
+                        <h3 class="text-center text-success">$ 23.100 </h3>
+                        <h6 class="text-center c-text"> (ml a $ 70,0) </h6>
+                        <a href="#" class="btn btn-primary btn-lg" onclick="shop(' Cerveza Stella Artois', 23100)">
+                            Agregar <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card m-2 item">
+                    <img src="img//Productos/peñasol.png" class="card-img-top" alt="vino">
+                    <div class="card-body text-center">
+                        <h5 class="card-title text-center"> Vino blanco Peñasol x750ml</h5>
+                        <br>
+                        <h3 class="text-center text-success">$ 15.000 </h3>
+                        <h6 class="text-center c-text"> (ml a $ 20,0) </h6>
+                        <a href="#" class="btn btn-primary btn-lg" onclick="shop('Vino blanco Peñasol', 15000 )">
+                            Agregar <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card m-2 item">
+                    <img src="img//Productos/gato.png" class="card-img-top" alt="vino">
+                    <div class="card-body text-center">
+                        <h5 class="card-title text-center"> Vino tinto Gato Negro x750ml </h5>
+                        <h6 class="text-center text-secondary"><del> Antes $ 45.000 </del> </h6>
+                        <h3 class="text-center text-success"> Ahora $ 22.500 </h3>
+                        <h6 class="text-center c-text"> (ml a $ 60,0) </h6>
+                        <a href="#" class="btn btn-primary btn-lg" onclick="shop('Vino tinto Gato Negro', 45000)">
+                            Agregar <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <div class="card m-2 item">
+                    <img src="img//Productos/baileys.png" class="card-img-top" alt="whisky">
+                    <div class="card-body text-center">
+                        <h5 class="card-title text-center"> Crema de Whisky Baileys x1000ml </h5>
+                        <h3 class="text-center text-success">$ 89.000 </h3>
+                        <h6 class="text-center c-text"> (ml a $ 89,0) </h6>
+                        <a href="#" class="btn btn-primary btn-lg" onclick="shop('Crema de Whisky Baileys', 89000)">
+                            Agregar <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card m-2 item">
+                    <img src="img//Productos/buchanans.png" class="card-img-top" alt="whisky">
+                    <div class="card-body text-center">
+                        <h5 class="card-title text-center"> Whisky Buchanans Deluxe x750ml </h5>
+                        <h3 class="text-center text-success">$ 135.000 </h3>
+                        <h6 class="text-center c-text"> (ml a $ 180,0) </h6>
+                        <a href="#" class="btn btn-primary btn-lg" onclick="shop('Whisky Buchanans Deluxe', 135000)">
+                            Agregar <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card m-2 item">
+                    <img src="img//Productos/corona.png" class="card-img-top" alt="cerveza">
+                    <div class="card-body text-center">
+                        <h5 class="card-title text-center"> Cerveza Corona x6und x355ml </h5>
+                        <br>
+                        <h3 class="text-center text-success">$ 25.200 </h3>
+                        <h6 class="text-center c-text"> (ml a $ 71,0) </h6>
+                        <a href="#" class="btn btn-primary btn-lg" onclick="shop('Cerveza Corona', 25200)">
+                            Agregar <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card m-2 item">
+                    <img src="img//Productos/lheritage.png" class="card-img-top" alt="vino">
+                    <div class="card-body text-center">
+                        <h5 class="card-title text-center"> Vino Lheritage x750ml </h5>
+                        <br>
+                        <h3 class="text-center text-success">$ 21.000</h3>
+                        <h6 class="text-center c-text"> (ml a $ 28,0) </h6>
+                        <a href="#" class="btn btn-primary btn-lg" onclick="shop('Vino Lheritage', 21000)">
+                            Agregar <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Fin Contenido sección licores -->
+
+    <!-- Contenido sección panaderia -->
+    <div class="container page" id="panaderia">
+        <div class="row">
+            <div class="col">
+                <div class="card m-2 item">
+                    <img src="img//Productos/baguette.png" class="card-img-top" alt="pan">
+                    <div class="card-body text-center">
+                        <h5 class="card-title text-center"> Pan baguette x315g </h5>
+                        <h3 class="text-center text-success">$ 5.000 </h3>
+                        <h6 class="text-center c-text"> (gr a 15,8)</h6>
+                        <a href="#" class="btn btn-primary btn-lg" onclick="shop('Pan baguette', 5000)">
+                            Agregar <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card m-2 item">
+                    <img src="img//Productos/rollo.png" class="card-img-top" alt="pan">
+                    <div class="card-body text-center">
+                        <h5 class="card-title text-center"> Pan rollo x10und</h5>
+                        <h3 class="text-center text-success">$ 6.500 </h3>
+                        <br>
+                        <a href="#" class="btn btn-primary btn-lg " onclick="shop('Pan rollo', 6500)">
+                            Agregar <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card m-2 item">
+                    <img src="img//Productos/perro.png" class="card-img-top" alt="pan">
+                    <div class="card-body text-center">
+                        <h5 class="card-title text-center"> Pan perro x6und </h5>
+                        <h3 class="text-center text-success">$ 5.400 </h3>
+                        <br>
+                        <a href="#" class="btn btn-primary btn-lg" onclick="shop('Pan perro', 5400)">
+                            Agregar <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card m-2 item">
+                    <img src="img//Productos/roscon.png" class="card-img-top" alt="roscon">
+                    <div class="card-body text-center">
+                        <h5 class="card-title text-center"> Roscón de Bocadillo x300g</h5>
+                        <h3 class="text-center text-success">$ 3.900 </h3>
+                        <h6 class="text-center c-text"> (gr a 13,0)</h6>
+                        <a href="#" class="btn btn-primary btn-lg" onclick="shop('Roscón de Bocadillo', 3900)">
+                            Agregar <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <div class="card m-2 item">
+                    <img src="img//Productos/integral.png" class="card-img-top" alt="pan">
+                    <div class="card-body text-center">
+                        <h5 class="card-title text-center"> Pan integral x300g</h5>
+                        <h3 class="text-center text-success">$ 5.400 </h3>
+                        <h6 class="text-center c-text"> (gr a 18,0)</h6>
+                        <a href="#" class="btn btn-primary btn-lg" onclick="shop('Pan integral', 5400)">
+                            Agregar <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card m-2 item">
+                    <img src="img//Productos/campo.png" class="card-img-top" alt="pan">
+                    <div class="card-body text-center">
+                        <h5 class="card-title text-center"> Pan campo aceituna x400g</h5>
+                        <h3 class="text-center text-success">$ 5.600 </h3>
+                        <h6 class="text-center c-text"> (gr a 14,0)</h6>
+                        <a href="#" class="btn btn-primary btn-lg" onclick="shop('Pan campo aceituna', 5600)">
+                            Agregar <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card m-2 item">
+                    <img src="img//Productos/bono.png" class="card-img-top" alt="pan">
+                    <div class="card-body text-center">
+                        <h5 class="card-title text-center"> Pan de bono x4und </h5>
+                        <h3 class="text-center text-success">$ 8.500 </h3>
+                        <br>
+                        <a href="#" class="btn btn-primary btn-lg" onclick="shop('Pan de bono', 8500)">
+                            Agregar <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card m-2 item">
+                    <img src="img//Productos/roscon.png" class="card-img-top" alt="roscon">
+                    <div class="card-body text-center">
+                        <h5 class="card-title text-center"> Roscón de Arequipe x300g</h5>
+                        <h3 class="text-center text-success">$ 3.900 </h3>
+                        <h6 class="text-center c-text"> (gr a 13,0)</h6>
+                        <a href="#" class="btn btn-primary btn-lg" onclick="shop('Roscón de Arequipe', 3900)">
+                            Agregar <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Fin Contenido sección panaderia -->
+
+    <!-- Contenido sección pescado -->
+    <div class="container page" id="pescado">
+        <div class="row">
+            <div class="col">
+                <div class="card m-2 item">
+                    <img src="img//Productos/salmon.png" class="card-img-top" alt="salmon">
+                    <div class="card-body text-center">
+                        <h5 class="card-title text-center"> Sálmon Fresco x500g </h5>
+                        <br>
+                        <h3 class="text-center text-success">$ 36.000 </h3>
+                        <h6 class="text-center c-text"> (gr a $ 72,0) </h6>
+                        <a href="#" class="btn btn-primary btn-lg" onclick="shop('Sálmon Fresco', 36000)">
+                            Agregar <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card m-2 item">
+                    <img src="img//Productos/mojarra.png" class="card-img-top" alt="mojarra">
+                    <div class="card-body text-center">
+                        <h5 class="card-title text-center"> Mojarra roja x500g </h5>
+                        <br>
+                        <h3 class="text-center text-success">$ 19.000 </h3>
+                        <h6 class="text-center c-text"> (gr a $ 38,0) </h6>
+                        <a href="#" class="btn btn-primary btn-lg" onclick="shop('Mojarra roja', 19000)">
+                            Agregar <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card m-2 item">
+                    <img src="img//Productos/camaron.png" class="card-img-top" alt="camaron">
+                    <div class="card-body text-center">
+                        <h5 class="card-title text-center"> Camaron x700g </h5>
+                        <h6 class="text-center text-secondary"><del> Antes $ 42.000 </del> </h6>
+                        <h3 class="text-center text-success">$ Ahora 25.200 </h3>
+                        <h6 class="text-center c-text"> (gr a $ 60,0) </h6>
+                        <a href="#" class="btn btn-primary btn-lg" onclick="shop('Camaron', 25200)">
+                            Agregar <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card m-2 item">
+                    <img src="img//Productos/trucha.png" class="card-img-top" alt="trucha">
+                    <div class="card-body text-center">
+                        <h5 class="card-title text-center"> Trucha x1000g </h5>
+                        <br>
+                        <h3 class="text-center text-success">$ 23.000 </h3>
+                        <h6 class="text-center c-text"> (gr a $ 4,0) </h6>
+                        <a href="#" class="btn btn-primary btn-lg" onclick="shop('Trucha', 12000)">
+                            Agregar <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <div class="card m-2 item">
+                    <img src="img//Productos/tilapia.png" class="card-img-top" alt="tilapia">
+                    <div class="card-body text-center">
+                        <h5 class="card-title text-center"> Tilapia en filete x360g </h5>
+                        <br>
+                        <h3 class="text-center text-success">$ 22.000 </h3>
+                        <h6 class="text-center c-text"> (gr a $ 61,10) </h6>
+                        <a href="#" class="btn btn-primary btn-lg" onclick="shop('Tilapia en filete', 22000)">
+                            Agregar <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card m-2 item">
+                    <img src="img//Productos/cacham.png" class="card-img-top" alt="cachama">
+                    <div class="card-body text-center">
+                        <h5 class="card-title text-center"> Cachama x500g </h5>
+                        <br>
+                        <h3 class="text-center text-success">$ 10.700 </h3>
+                        <h6 class="text-center c-text"> (gr a $ 21,40) </h6>
+                        <a href="#" class="btn btn-primary btn-lg" onclick="shop('Cachama', 10700)">
+                            Agregar <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card m-2 item">
+                    <img src="img//Productos/palmito.png" class="card-img-top" alt="palmitos">
+                    <div class="card-body text-center">
+                        <h5 class="card-title text-center"> Palmitos de cangrejo x450g</h5>
+                        <br>
+                        <h3 class="text-center text-success">$ 14.400 </h3>
+                        <h6 class="text-center c-text"> (gr a $ 32,0) </h6>
+                        <a href="#" class="btn btn-primary btn-lg" onclick="shop('Palmitos de cangrejo', 14400)">
+                            Agregar <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card m-2 item">
+                    <img src="img//Productos/calamar.png" class="card-img-top" alt="calamar">
+                    <div class="card-body text-center">
+                        <h5 class="card-title text-center"> Anillos de calamar x400g </h5>
+                        <br>
+                        <h3 class="text-center text-success">$ 28.000 </h3>
+                        <h6 class="text-center c-text"> (gr a $ 70,0) </h6>
+                        <a href="#" class="btn btn-primary btn-lg" onclick="shop('Anillos de calamar', 28000)">
+                            Agregar <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Fin Contenido sección pescado -->
+
+
+    <!-- Contenido sección snacks -->
+    <div class="container page" id="snacks">
+        <div class="row">
+            <div class="col">
+                <div class="card m-2 item">
+                    <img src="img//Productos/oreo.png" class="card-img-top" alt="galletas">
+                    <div class="card-body text-center">
+                        <h5 class="card-title text-center"> Galletas Oreo x430g</h5>
+                        <br>
+                        <h3 class="text-center text-success">$ 8.900 </h3>
+                        <h6 class="text-center c-text"> (gr a 20,70)</h6>
+                        <a href="#" class="btn btn-primary btn-lg" onclick="shop('Galletas Oreo', 8900)">
+                            Agregar <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card m-2 item">
+                    <img src="img//Productos/ducales.png" class="card-img-top" alt="galletas">
+                    <div class="card-body text-center">
+                        <h5 class="card-title text-center"> Galletas Ducales x249g</h5>
+                        <br>
+                        <h3 class="text-center text-success">$ 5.700 </h3>
+                        <h6 class="text-center c-text"> (gr a 22,89)</h6>
+                        <a href="#" class="btn btn-primary btn-lg" onclick="shop('Galletas Ducales', 5700)">
+                            Agregar <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card m-2 item">
+                    <img src="img//Productos/doritos.png" class="card-img-top" alt="pasabocas">
+                    <div class="card-body text-center">
+                        <h5 class="card-title text-center"> Pasabocas Doritos x200g </h5>
+                        <br>
+                        <h3 class="text-center text-success">$ 7.600 </h3>
+                        <h6 class="text-center c-text"> (gr a 38,0)</h6>
+                        <a href="#" class="btn btn-primary btn-lg" onclick="shop('Pasabocas Doritos', 7600)">
+                            Agregar <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card m-2 item">
+                    <img src="img//Productos/tosh.png" class="card-img-top" alt="galletas">
+                    <div class="card-body text-center">
+                        <h5 class="card-title text-center"> Galletas Tosh Miel x418g</h5>
+                        <br>
+                        <h3 class="text-center text-success">$ 6.500 </h3>
+                        <h6 class="text-center c-text"> (gr a 15,55)</h6>
+                        <a href="#" class="btn btn-primary btn-lg" onclick="shop('Galletas Tosh Miel', 6500)">
+                            Agregar <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <div class="card m-2 item">
+                    <img src="img//Productos/margarita.png" class="card-img-top" alt="papas">
+                    <div class="card-body text-center">
+                        <h5 class="card-title text-center"> Papas fritas Margarita 12und x300g</h5>
+                        <h3 class="text-center text-success">$ 16.900 </h3>
+                        <br>
+                        <h6 class="text-center c-text"> (gr a 56,33)</h6>
+                        <a href="#" class="btn btn-primary btn-lg" onclick="shop('Papas fritas Margaritas', 16900)">
+                            Agregar <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card m-2 item">
+                    <img src="img//Productos/tostacos.png" class="card-img-top" alt="tostacos">
+                    <div class="card-body text-center">
+                        <h5 class="card-title text-center"> Tostacos sabor picante x12und x25g</h5>
+                        <br>
+                        <h3 class="text-center text-success">$ 9.700 </h3>
+                        <h6 class="text-center c-text"> (gr a 32,33)</h6>
+                        <a href="#" class="btn btn-primary btn-lg" onclick="shop('Tostacos sabor picante', 9700)">
+                            Agregar <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card m-2 item">
+                    <img src="img//Productos/cheetos.png" class="card-img-top" alt="pasabocas">
+                    <div class="card-body text-center">
+                        <h5 class="card-title text-center"> Pasabocas Cheetos horneados x44g</h5>
+                        <br>
+                        <h3 class="text-center text-success">$ 1.600 </h3>
+                        <h6 class="text-center c-text"> (gr a 36,38)</h6>
+                        <a href="#" class="btn btn-primary btn-lg" onclick="shop('Pasabocas Cheetos horneados', 1600)">
+                            Agregar <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card m-2 item">
+                    <img src="img//Productos/maizitos.png" class="card-img-top" alt="pasabocas">
+                    <div class="card-body text-center">
+                        <h5 class="card-title text-center"> Pasabocas Maizitos 12und x360g </h5>
+                        <h6 class="text-center text-secondary"><del> Antes $ 11.300 </del> </h6>
+                        <h3 class="text-center text-success">$ Ahora 9.040 </h3>
+                        <h6 class="text-center c-text"> (gr a 31,39)</h6>
+                        <a href="#" class="btn btn-primary btn-lg" onclick="shop('Pasabocas Maizitos', 9040)">
+                            Agregar <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Fin Contenido sección snacks -->
+
+
+    <!-- Contenido sección super -->
+    <div class="container page" id="super">
+        <div class="row">
+            <div class="row row-cols-1 row-cols-md-6 g-6">
+                <div class="col">
+                    <div class="card m-2">
+                        <a onclick="openPage(event, 'carne')">
+                            <img src="img//carnes.png" class="card-img-top" alt="carnes" />
+                        </a>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card m-2">
+                        <a onclick="openPage(event, 'frutas')">
+                            <img src="img//FrutasVerduras.png" class="card-img-top" alt="vegetales" />
+                        </a>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card m-2">
+                        <a onclick="openPage(event, 'pescado')">
+                            <img src="img//pescados.png" class="card-img-top" alt="pescados" />
+                        </a>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card m-2">
+                        <a onclick="openPage(event, 'despensa')">
+                            <img src="img//despensa.png" class="card-img-top" alt="despensa" />
+                        </a>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card m-2">
+                        <a onclick="openPage(event, 'panaderia')">
+                            <img src="img//panad.png" class="card-img-top" alt="panaderia" />
+                        </a>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card m-2">
+                        <a onclick="openPage(event, 'lacteos')">
+                            <img src="img//lacteos.png" class="card-img-top" alt="lacteos" />
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="row row-cols-1 row-cols-md-6 g-6">
+                <div class="col">
+                    <div class="card m-2">
+                        <a onclick="openPage(event, 'licores')">
+                            <img src="img//licores.png" class="card-img-top" alt="licores" />
+                        </a>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card m-2">
+                        <a onclick="openPage(event, 'bebidas')">
+                            <img src="img//bebidas.png" class="card-img-top" alt="bebidas" />
+                        </a>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card m-2">
+                        <a onclick="openPage(event, 'snacks')">
+                            <img src="img//snack.png" class="card-img-top" alt="snacks" />
+                        </a>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card m-2">
+                        <a onclick="openPage(event, 'helados')">
+                            <img src="img//helados.png" class="card-img-top" alt="helados" />
+                        </a>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card m-2">
+                        <a onclick="openPage(event, 'dulces')">
+                            <img src="img//dulce.png" class="card-img-top" alt="dulces" />
+                        </a>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card m-2">
+                        <a onclick="openPage(event, 'aseo')">
+                            <img src="img//AseoHogar.png" class="card-img-top" alt="aseo" />
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Fin Contenido sección super -->
+
+
+    <!-- Contenido sección Carne -->
+    <div class="container page" id="carne">
+        <div class="row">
+            <div class="col">
+                <div class="card m-2 item">
+                    <img src="img/Productos/costilla.png" class="card-img-top" alt="costilla">
+                    <div class="card-body text-center">
+                        <h5 class="card-title text-center"> Costilla de cerdo x500g </h5>
+                        <h3 class="text-center text-success">$ 8.500 </h3>
+                        <h6 class="text-center c-text"> (gr a $ 17,0) </h6>
+                        <a href="#" class="btn btn-primary btn-lg" onclick="shop('Costilla de cerdo', 8500)">
+                            Agregar <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card m-2 item">
+                    <img src="img/Productos/Lomo.png" class="card-img-top" alt="lomo">
+                    <div class="card-body text-center">
+                        <h5 class="card-title text-center"> Lomo de cerdo x500g </h5>
+                        <h3 class="text-center text-success">$ 10.400 </h3>
+                        <h6 class="text-center c-text"> (gr a $ 20,80) </h6>
+                        <a href="#" class="btn btn-primary btn-lg" onclick="shop('Lomo de cerdo', 10400)">
+                            Agregar <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card m-2 item">
+                    <img src="img/Productos/chuleta.png" class="card-img-top" alt="chuleta">
+                    <div class="card-body text-center">
+                        <h5 class="card-title text-center"> Chuleta de cerdo x1000g </h5>
+                        <h3 class="text-center text-success">$ 12.000 </h3>
+                        <h6 class="text-center c-text"> (gr a $ 12,0) </h6>
+                        <a href="#" class="btn btn-primary btn-lg" onclick="shop('Chuleta de cerdo', 12000)">
+                            Agregar <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card m-2 item">
+                    <img src="img/Productos/beef.png" class="card-img-top" alt="beef">
+                    <div class="card-body text-center">
+                        <h5 class="card-title text-center"> Beef Steak x500g </h5>
+                        <h3 class="text-center text-success">$ 14.800 </h3>
+                        <h6 class="text-center c-text"> (gr a $ 28,0) </h6>
+                        <a href="#" class="btn btn-primary btn-lg" onclick="shop('Beef Steak', 14800)">
+                            Agregar <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <div class="card m-2 item">
+                    <img src="img/Productos/murillo.png" class="card-img-top" alt="murillo">
+                    <div class="card-body text-center">
+                        <h5 class="card-title text-center"> Murillo sin hueso x500g </h5>
+                        <h3 class="text-center text-success">$ 12.000 </h3>
+                        <h6 class="text-center c-text"> (gr a $ 24,0) </h6>
+                        <a href="#" class="btn btn-primary btn-lg" onclick="shop('Murillo sin hueso', 12000)">
+                            Agregar <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card m-2 item">
+                    <img src="img/Productos/pechuga.png" class="card-img-top" alt="pechuga">
+                    <div class="card-body text-center">
+                        <h5 class="card-title text-center"> Pechuga de pollo x1400g </h5>
+                        <h3 class="text-center text-success">$ 25.900 </h3>
+                        <h6 class="text-center c-text"> (gr a $ 18,50) </h6>
+                        <a href="#" class="btn btn-primary btn-lg" onclick="shop('Pechuga de pollo', 25900)">
+                            Agregar <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card m-2 item">
+                    <img src="img/Productos/muslo.png" class="card-img-top" alt="muslo">
+                    <div class="card-body text-center">
+                        <h5 class="card-title text-center"> Muslo de pollo x800g </h5>
+                        <h3 class="text-center text-success">$ 15.000 </h3>
+                        <h6 class="text-center c-text"> (gr a $ 18,75) </h6>
+                        <a href="#" class="btn btn-primary btn-lg" onclick="shop('Muslo de pollo', 15000)">
+                            Agregar <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card m-2 item">
+                    <img src="img/Productos/pernil.png" class="card-img-top" alt="pernil">
+                    <div class="card-body text-center">
+                        <h5 class="card-title text-center"> Pernil de pollo x700g </h5>
+                        <h3 class="text-center text-success">$ 12.000 </h3>
+                        <h6 class="text-center c-text"> (gr a $ 17,15) </h6>
+                        <a href="#" class="btn btn-primary btn-lg" onclick="shop('Pernil de pollo', 12000)">
+                            Agregar <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Fin Contenido sección Carne -->
+
+    <!--Modal oferta del día-->
+    <div class="modal" tabindex="-1" role="dialog" id="ofertaDia">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="card fondo">
+                    <a href="#" >
+                        <img onclick="openPage(event, 'licores')" src="img//oferta.png" class="card-img-top sale" alt="oferta" height="auto" width="50px">
+                    </a>
+                </div>
+                <div class="modal-footer boton">
+                    <button type="button" class="btn btn-primary" data-dismiss="modal" id="btnCloseOfertaDia">
+                        Cerrar
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--Fin Modal oferta del día -->
+
+    <!--Modal btnOfertas -->
+    <div class="modal" tabindex="-1" role="dialog" id="ofertas">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col">
+                                <div class="card m-2">
+                                    <img onclick="openPage(event, 'snacks')" src="img/oferta1.png" alt="">
+                                </div>
+                            </div>
+                            <div class="col m-2">
+                                <div class="card">
+                                    <img onclick="openPage(event, 'helados')" src="img/oferta2.png" alt="">
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="card m-2">
+                                    <img onclick="openPage(event, 'pescado')" src="img/oferta3.png" alt="">
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="card m-2">
+                                    <img onclick="openPage(event, 'dulces')" src="img/oferta4.png" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer boton">
+                            <button type="button" class="btn btn-primary" data-dismiss="modal" id="btnCloseOferta">
+                                Cerrar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--Fin modal btnOfertas-->
+
+    <!-- Modal respuesta buscador-->
+    <div class="modal" tabindex="-1" role="dialog" id="modalBuscar">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-body text-center">
+                    <p id="rtaBuscar"></p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-dismiss="modal"
+                        onclick="document.getElementById('modalBuscar').style.display = 'none'">
+                        Cerrar
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Fin Modal respuesta buscador-->
+
+    <!-- Modal carrito de compras-->
+    <div class="modal" tabindex="-1" role="dialog" id="buy">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-body text-center">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th scope="col">Producto</th>
+                                <th scope="col">Precio</th>
+                            </tr>
+                        </thead>
+                        <tbody id="factura"> </tbody>
+                    </table>
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th scope="col">
+                                </th>
+                                <th scope="col">
+                                    <strong>
+                                        <p id="total"></p>
+                                    </strong>
+                                </th>
+                            </tr>
+                        </thead>
+                    </table>
+                    <div class="container m-6">
+                        <h3>Datos de entrega</h3>
+                        <br>
+                        <div class="col-auto">
+                            <label for="nombre" class="visually-hidden">Nombre</label>
+                            <input type="text" class="form-control" id="nombre" placeholder="Nombre">
+                        </div>
+                        <br>
+                        <div class="col-auto">
+                            <label for="direccion" class="visually-hidden">Direccion</label>
+                            <input type="text" class="form-control" id="direccion" placeholder="Direccion">
+                        </div>
+                        <br>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                            <label class="form-check-label" for="flexCheckDefault">
+                                Domicilio
+                            </label>
+                        </div>
+                        <br>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+                            <label class="form-check-label" for="flexCheckChecked">
+                                Recoger en tienda
+                            </label>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-dismiss="modal"
+                        onclick="document.getElementById('buy').style.display = 'none', alert('Gracias por su compra')">
+                        Comprar
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Fin Modal carrito de compras-->
+
+    <script src="./js/function.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
